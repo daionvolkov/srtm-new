@@ -1,0 +1,28 @@
+{% extends 'blog/base.html' %}
+{% load static %}
+{% block title%}
+{{title}}
+{% endblock %}
+
+{% block content%}
+<h2>{{title}}</h2> <br>
+<div class="container home_text">
+  <b>{{adress}}</b> <br>
+  Телефон:    {{tel}} <br>
+  Мобильный: {{mob}}<br>
+  e-mail: <a href="contactus/">{{ mail}}</a><br><br>
+</div>
+
+<div class="container home_text">
+<p><b>Режим работы:</b><br>
+Понедельник - четверг с 9:00 до 18:00, без перерыва;<br>
+Пятница с 9:00 до 17:00;<br>
+Суббота и воскресенье - выходной</p>
+</div>
+{% endblock %}
+
+{% block aside_block %}
+<h4>Большой ассортимент</h4>
+<img src="{% static 'img/pick2.png' %}" width=100%>
+<a href="photos">Еще фото</a>
+{% endblock %}

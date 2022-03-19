@@ -1,0 +1,20 @@
+{% extends 'blog/base.html' %}
+{% load static %}
+{% block title%}
+Обратная связь
+{% endblock %}
+
+{% block content%}
+<h3>Обратная связь</h3><br>
+<form method="post">
+  {% csrf_token %}
+  {{data.as_p}}
+  <button type="submit" class="btn btn-success">Отправить</button>
+</form>
+
+{%endblock%}
+{% block aside_block %}
+  <h4 class="mt-2">Наличие на складе</h4>
+  <img src="{% static 'img/pick1.jpg' %}" width=100%>
+
+{% endblock %}

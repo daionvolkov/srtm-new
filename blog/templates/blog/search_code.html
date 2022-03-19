@@ -1,0 +1,30 @@
+{% extends 'blog/base.html' %}
+
+{% load static %}
+{% block title%}
+Поиск
+{% endblock %}
+{% block content%}
+<h2>Результат</h2> <br>
+<div class="container">
+
+  {% for el in figure %}
+  <table>
+    <thead  align=center>
+      <th>Артикул</th><th>Описание</th><th>Количество</th>
+
+    </thead>
+      <tr>
+        <td align="center">{{el.code}}</td>
+        <td>{{el.description}}</td>
+        <td align="center">{{el.amaunt}}</td>
+        <td></td>
+        <td></td>
+        <td><b><a class="ms-4" href="/order">Заказать</a></b></td>
+      </tr>
+    </table>
+   {%endfor%}
+
+
+</div>
+{% endblock %}

@@ -1,0 +1,23 @@
+{% extends 'blog/base.html' %}
+{% load static %}
+{% block title%}
+Фото
+{% endblock %}
+
+{% block content%}
+<h2>{{title}}</h2><br>
+<p class="thumb">
+  <img src="{% static 'img/pick3.png' hspace='10px' %}" width=45%>
+  <img src="{% static 'img/pick2.png' hspace='10px' %}" width=45%>
+</p>
+<p class="thumb">
+  <img src="{% static 'img/pick3.png' hspace='20px' %}" width=45%>
+  <img src="{% static 'img/pick4.png' hspace='20px' %}" width=45%>
+</p>
+<p class="thumb">
+  <img src="{% static 'img/pick5.png' hspace='10px' %}" width=45%>
+  <img src="{% static 'img/pick6.png' hspace='10px' %}" width=45%>
+</p>
+
+
+{%endblock%}

@@ -1,0 +1,33 @@
+{% extends 'blog/base.html' %}
+{% load static %}
+{% block title%}
+Заказ
+{% endblock %}
+{% block content%}
+
+  {%for el1 in figure%}
+  <div class="container">
+    <h5>Заполнить заявку</h5>
+    <form method="POST" id="OrderForm">
+      {% csrf_token %}
+      <label for="OrderForm">Артикул</label><br>
+      <input id="code_order" class="form-control"  type="text" name="code_order" value="{{el1.code}}"><br>
+      <label for="OrderForm">Описание</label><br>
+      <input id="description_order" class="form-control"  type="text" name="description_order" value="{{el1.description}}"><br>
+
+
+        <label for="OrderForm">Количество</label><br>
+        <input id="amaunt_order" class="form-control" required type="number" min="1" max="{{el1.amaunt}}" name="amaunt_order" value="{{el1.amaunt}}"><br>
+
+      <label for="OrderForm">Email</label><br>
+      <input id="email" class="form-control"  type="email" name="email" placeholder="Введите почту" value="nomail@nomail.com"><br>
+      <label for="OrderForm">Телефон</label><br>
+      <input id="phone" class="form-control" required type="text" name="phone" placeholder="Введите телефон"><br>
+      <button class="btn btn-success" type="submit">Заказать</button>
+      {%endfor%}
+    </form>
+  </div>
+{%endblock%}
+{% block aside_block %}
+
+{% endblock %}

@@ -1,0 +1,12 @@
+{% extends 'blog/base.html' %}
+{% load static %}
+
+{% block title%}
+{{title}}
+{% endblock %}
+
+{% block content%}
+<h2>{{title}}</h2><br>
+<img src="{% static 'img/doroga.jpg' %}" width=100%><br>
+<p class="center home_text"><b>Тролейбус 4, автобус 1, 3Т, 5, 33, маршрутки 54, 55, 61 до остановки "Улица Марата"</b></p>
+{%endblock%}

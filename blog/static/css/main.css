@@ -1,0 +1,55 @@
+body {
+  background: #E6FFFF;
+  font-family: 'Roboto Condensed';
+  color:
+}
+.home_text  {
+  font-size: 18px;
+  font-family: 'Roboto Condensed';
+}
+.nav_tull {
+    background: #E8FFFF;}
+
+
+.thumb img {
+   border: 1px /* Рамка вокруг фотографии */
+  padding: 15px; /* Расстояние от картинки до рамки */
+  /*background: #666; /* Цвет фона */
+  border-radius: 5px;
+  /*margin-right: 10px; /* Отступ справа */
+  /*margin-bottom: 10px; /* Отступ снизу */
+}
+
+
+.title_text {
+  font-size: 30px;
+  color: #000000;
+}
+#text_m {
+  color: grey;
+  font-size: 14px;
+}
+
+#nav_text {
+  font-size: 20px;
+  font-weight: bold;
+  color: #000000; /* Цвет ссылки */
+  padding: 20px 0px;
+  line-height: 1;
+  text-decoration: none;
+  -webkit-transition: all 1s ease;
+          transition: all 1s ease; /* Время изменения цвета */
+}
+
+
+#nav_text:hover{
+  color: 	#7B68EE; /* Меняем цвет ссылки */
+}
+#code_order {
+  color: #2F4F4F;
+  background-color: #A9A9A9;
+}
+#description_order {
+  color: #2F4F4F;
+  background-color: #A9A9A9;
+}

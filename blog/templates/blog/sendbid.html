@@ -1,0 +1,29 @@
+{% extends 'blog/base.html' %}
+{% load static %}
+{% block title%}
+Создать заявку
+{% endblock %}
+{% block content%}
+ <h4>Оставить заявку</h4>
+<div class="container">
+
+    <form method="POST" id="SendBidForm">
+      {% csrf_token %}
+      <label for="SendBidForm">Артикул</label><br>
+      <input id="code_bid" class="form-control"  type="text" name="code_bid" value="000000"><br>
+      <label for="SendBidForm">Описание</label><br>
+      <input id="description_bid" class="form-control" required type="text" name="description_bid" value=""><br>
+      <label for="SendBidForm">Количество</label><br>
+      <input id="amaunt_bid" class="form-control" required type="number" name="amaunt_bid" value=""><br>
+      <label for="SendBidForm">Email</label><br>
+      <input id="email" class="form-control"  type="email" name="email" placeholder="Введите почту" value="nomail@nomail.com"><br>
+      <label for="SendBidForm">Телефон</label><br>
+      <input id="phone" class="form-control" required type="text" name="phone" placeholder="Введите телефон"><br>
+      <button class="btn btn-success" type="submit">Заказать</button>
+    </form>
+  </div>
+
+{%endblock%}
+{% block aside_block %}
+
+{% endblock %}

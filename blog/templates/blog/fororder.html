@@ -1,0 +1,15 @@
+{% extends 'blog/base.html' %}
+{% load static %}
+{% block title%}
+ Заказ
+{% endblock %}
+{% block content%}
+ <h4>Ничего не найдено</h4>
+ <p>В данные момент данной позиции нет на складе, вы можете оставить заявку</p><br>
+
+<a href="{% url 'sendbid'%}">Оставить заявку</a>
+
+{%endblock%}
+{% block aside_block %}
+
+{% endblock %}
